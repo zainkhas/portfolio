@@ -1,0 +1,24 @@
+{
+  "fullName": "Zain Ul Abdin Khaskheli",
+  "designation": "Software Engineer",
+  "company": "Dubizzle",
+  "company_url": "https://google.com",
+  "email": "zainkhas93@gmail.com",
+  "social_links": [
+    {
+      "name": "Github",
+      "url": "https://github.com/zainkhas",
+      "icon": "github.svg"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/zainkhas/",
+      "icon": "linkedin.svg"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/zain_khas/",
+      "icon": "insta.svg"
+    }
+  ]
+}

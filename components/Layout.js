@@ -6,7 +6,14 @@ import NavBar from "./NavBar";
 
 export const siteTitle = "Zain Ul Abdin Khaskheli";
 
-export default function Layout({ children, home, metaData, menu }) {
+export default function Layout({
+  children,
+  home,
+  metaData,
+  menu,
+  title,
+  description,
+}) {
   return (
     <div className="container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 sm:px-20">
       <Head>
@@ -50,36 +57,18 @@ export default function Layout({ children, home, metaData, menu }) {
             </div>
           </div>
         ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.png"
-                  height={108}
-                  width={108}
-                  alt=""
-                />
-              </a>
-            </Link>
-            <h2>
-              <Link href="/">
-                <a>{metaData.fullName}</a>
-              </Link>
-            </h2>
-          </>
+          <div>
+            <h1 className="text-4xl font-bold text-title">{title}</h1>
+            <div className="text-xl text-title font-normal leading-10">
+              {description}
+            </div>
+          </div>
         )}
       </header>
 
       <main className="my-10">{children}</main>
 
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      {!home && <div></div>}
     </div>
   );
 }

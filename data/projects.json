@@ -1,0 +1,83 @@
+[
+  {
+    "name": "WebHR",
+    "description": "WebHR - Web Human Resource is a Cloud-based HR System that covers entirely from \"Hire\" to \"Retire” for employees in an organization, facilitating all functions of the Human Resource Department that deal with recruitment, employee management, payroll, performance, training, etc.",
+    "image": "WebHR.png",
+    "website": "https://web.hr",
+    "google_play": "https://play.google.com/store/apps/details?id=com.vergesystems.webhr&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/us/app/web-human-resource-webhr/id694540825"
+  },
+  {
+    "name": "WebHR eTrack",
+    "description": "WebHR eTrack is an extension module for WebHR, it allows you to manage and track your employees' real-time and previous locations captured from their smartphones. It can be used to track sales and delivery team members anytime, from anywhere.",
+    "image": "eTrack.png",
+    "website": "https://web.hr",
+    "google_play": "https://play.google.com/store/apps/details?id=com.vergesystems.webhr.etrack&hl=en&gl=US",
+    "app_store": ""
+  },
+
+  {
+    "name": "WebHR TimeClock Kiosk",
+    "description": "WebHR TimeClock Kiosk is a part of the Timesheet module in WebHR, it's an offline-first app to be used as a kiosk in an office station or any site, allowing employees to clock in/out when entering or exiting the station.",
+    "image": "Kiosk.png",
+    "website": "https://web.hr",
+    "google_play": "https://play.google.com/store/apps/details?id=com.vergesystems.webhr.kiosk.timeclock&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/us/app/webhr-time-clock-kiosk/id1484439575"
+  },
+  {
+    "name": "HireSide",
+    "description": "HireSide is a job portal, that helps people find jobs near them. It automatically aggregates jobs from thousands of websites and job boards, and notifies job seekers about job availability at certain locations, making it a one-stop shop for all available jobs for any locality.",
+    "image": "HireSide.png",
+    "website": "https://hireside.com",
+    "google_play": "https://play.google.com/store/apps/details?id=com.hireside&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/in/app/hireside/id1612426533"
+  },
+  {
+    "name": "SmartPupils",
+    "description": "SmartPupils is a cloud-based School Management system having features like managing students, teachers, and other employees, managing multiple branches and fees, timetable creation and allocation to classes, creating and managing courses, homework, exams, etc.",
+    "image": "SmartPupils.png",
+    "website": "https://www.smartpupils.com/",
+    "google_play": "",
+    "app_store": "https://apps.apple.com/us/developer/naveed-memon/id687476453"
+  },
+  {
+    "name": "SomeZing",
+    "description": "SomeZing is a marketplace to connect businesses with local professionals. A business (service consumer) can request for a service from an individual or another business (service provider) to perform tasks ranging from cleaning, installation, moving, graphics designing, legal services, HR, accounting services, and more.",
+    "image": "SomeZing.png",
+    "website": "https://somezing.com",
+    "google_play": "https://play.google.com/store/apps/details?id=com.somezing&hl=en&gl=US",
+    "app_store": "https://apps.apple.com/in/developer/verge-inc/id1518950496"
+  },
+  {
+    "name": "Salesflo Core",
+    "description": "Salesflo app is a part of a SaaS-based sales and distribution system, used for order-booking, spot-selling, and delivering goods by users in the retail ecosystem. Some features of the application require location tracking to provide visibility to allow managers to always know where app users are during field visits, so that their performance may be tracked even when the app is closed or not in use.",
+    "image": "Salesflo.png",
+    "website": "https://salesflo.com/salesflo-core/",
+    "google_play": "https://play.google.com/store/apps/details?id=com.retailistan.salesflo&hl=en&gl=US",
+    "app_store": ""
+  },
+  {
+    "name": "StoreViz",
+    "description": "StoreViz is a Saas-based merchandising and auditing system.",
+    "image": "StoreViz.png",
+    "website": "https://storeviz.com",
+    "google_play": "https://play.google.com/store/apps/details?id=com.retailistan.storeviz.psaudit&hl=en&gl=US",
+    "app_store": ""
+  },
+  {
+    "name": "Salesflo Sight",
+    "description": "The Salesflo Sight Application is designed to provide enhanced sales and distribution business intelligence to companies for improved decision-making and wider accessibility to important data",
+    "image": "Sight.png",
+    "website": "https://salesflo.com/salesflo-sight/",
+    "google_play": "https://play.google.com/store/apps/details?id=com.salesflosightmanagerapp&hl=en&gl=US",
+    "app_store": ""
+  },
+  {
+    "name": "Anidra",
+    "description": "The Anidra Remote Monitoring Solution is designed for doctors to view a patient’s vital signs, blood oxygen, saturation, blood pressure, body temperature, breathing rate, ECG, and heart rate. Continuously in real-time from anywhere in the world.",
+    "image": "Anidra.png",
+    "website": "https://anidra.in/",
+    "google_play": "https://play.google.com/store/apps/details?id=com.anidrarpm&hl=en&gl=US",
+    "app_store": ""
+  }
+]

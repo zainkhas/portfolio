@@ -38,7 +38,7 @@ export default function Home({ about, metaData, menu, footer }) {
           />
         </Content>
       </Section>
-      <Section>
+      <Section id="contact">
         <Title>Contact</Title>
         <Content>
           <div

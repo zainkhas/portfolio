@@ -1,7 +1,7 @@
 👋 Hi, I am **Zain**. I’m a **Mobile & Frontend Developer** from 🇵🇰 Pakistan. I have over 6 years of experience building mobile & web apps. Nowadays I like working on and exploring JavaScript libraries and technologies, and crafting solid apps with great UX and performance.
 Over the past 6 years, I’ve built apps with a focus on performance, the latest technologies, and accessible user experiences.
 <br/>
-Currently, I work at **dubizzle**, as a Software Engineer - Frontend.
+Currently, I work at **EMPG Labs - Dubizzle**, as a Software Engineer - Frontend.
 <br/>
 Before now, I was working at **WebHR** - Verge Systems as a Mobile App Developer - Team Lead, where I led a team and worked on multiple products related to HR and recruitment. Mostly on WebHR, a SaaS-based Social HR for SMEs having 25,000+ client companies and millions of users across the world.
 <br/>

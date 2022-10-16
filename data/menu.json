@@ -1,18 +1,22 @@
 [
   {
     "name": "About",
-    "page": "/"
+    "page": "/",
+    "hide": false
   },
   {
     "name": "Work",
-    "page": "/work"
+    "page": "/work",
+    "hide": false
   },
   {
     "name": "Resume",
-    "page": "/resume"
+    "page": "/resume",
+    "hide": true
   },
   {
     "name": "Contact",
-    "page": "/contact"
+    "page": "#contact",
+    "hide": false
   }
 ]

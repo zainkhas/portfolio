@@ -1,5 +1,6 @@
 import React from "react";
 import Script from "next/script";
+import Link from "next/link";
 
 const NavBar = ({ menu }) => {
   return (
@@ -43,16 +44,18 @@ const NavBar = ({ menu }) => {
             </button>
             <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
               <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-                {menu.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.page}
-                      class="text-gray-700 hover:text-black hover:bg-gray-100  md:hover:bg-transparent border-0 block pl-3 pr-4 py-2 md:p-0"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
+                {menu
+                  .filter((item) => !item.hide)
+                  .map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.page}
+                        class="text-gray-700 hover:text-black hover:bg-gray-100  md:hover:bg-transparent border-0 block pl-3 pr-4 py-2 md:p-0"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>

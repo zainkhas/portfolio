@@ -1,5 +1,5 @@
 👋 Hi, I am **Zain**. I’m a **Mobile & Frontend Developer** from 🇵🇰 Pakistan. I have over 6 years of experience building mobile & web apps. Nowadays I like working on and exploring JavaScript libraries and technologies, and crafting solid apps with great UX and performance.
-Over the past 6 years, I’ve built apps with a focus on performance, the latest technologies, and accessible user experiences.
+Over the past years, I’ve built apps with a focus on performance, the latest technologies, and accessible user experiences.
 <br/>
 Currently, I work at **EMPG Labs - Dubizzle**, as a Software Engineer - Frontend.
 <br/>
@@ -14,7 +14,7 @@ I once also worked as [an ASP.NET](http://asp.net/) Developer - Intern at **P
 In my spare time I
 <br/>
 
-- 💻  build my own projects
-- 🔎  explore new tools, libs, and UI design ideas
-- 🏓  play table tennis and foosball
-- 🍿  watch Netflix
+- 💻  Build my own projects
+- 🔎  Explore new tools, libs, and UI design ideas
+- 🏓  Play table tennis and foosball
+- 🍿  Watch Netflix

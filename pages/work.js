@@ -10,7 +10,7 @@ import { getProjects } from "../lib/projects";
 import ImgsViewer from "react-images-viewer";
 import IconButton from "../components/IconButton";
 
-export const siteTitle = "Zain Ul Abdin Khaskheli | Work";
+export const siteTitle = "Work | Zain Ul Abdin Khaskheli";
 
 export async function getStaticProps() {
   const { menu } = await getAll();
@@ -55,7 +55,7 @@ const Work = ({ menu, projects, images }) => {
       <Section>
         <Content>
           {projects.map((item, index) => (
-            <div className="flex items-center my-10">
+            <div className="flex items-center my-10" key={item.name}>
               <div className="flex-1">
                 <Title>{item.name}</Title>
                 <div className="my-5 mr-2 text-primary">

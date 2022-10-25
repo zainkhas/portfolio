@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         jakarta: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
       },
+      lineHeight: {
+        11: "2.4rem",
+      },
     },
   },
   plugins: [],

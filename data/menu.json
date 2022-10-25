@@ -12,11 +12,11 @@
   {
     "name": "Resume",
     "page": "/resume",
-    "hide": true
+    "hide": false
   },
   {
     "name": "Contact",
-    "page": "#contact",
+    "page": "/#contact",
     "hide": false
   }
 ]

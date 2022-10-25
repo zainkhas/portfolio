@@ -8,6 +8,7 @@ body {
   margin: 0;
 
   font-family: "Plus Jakarta Sans";
+  font-style: normal;
 }
 
 a {
@@ -19,11 +20,8 @@ a {
   box-sizing: border-box;
 }
 
-p,
 ul,
 li {
-  font-family: "Plus Jakarta Sans";
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 40px;

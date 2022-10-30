@@ -71,7 +71,6 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
     }, {});
   });
 
-  console.log(tenure);
   return (
     <Layout menu={menu}>
       <Head>
@@ -79,8 +78,10 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
       </Head>
 
       <div>
-        <div className="bg-[#F9FAFB] py-20 px-14 rounded">
-          <h1 className="text-4xl font-bold text-title">{metaData.fullName}</h1>
+        <div className="bg-[#F9FAFB] md:py-20 py-10 md:px-14 px-5 rounded">
+          <h1 className="md:text-4xl text-2xl font-bold text-title">
+            {metaData.fullName}
+          </h1>
           <h3 className="text-secondary text-lg leading-10">
             {resume.tagline}
 
@@ -137,7 +138,7 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
             <Title>Education</Title>
             {resume.education.map((education) => (
               <Content key={education.field}>
-                <div>
+                <div className="my-5">
                   <div className="font-medium">{education.field}</div>
                   <div className="font-normal text-lg leading-11 text-secondary">
                     {education.duration}
@@ -154,9 +155,9 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
             <Title>Experience</Title>
             {resume.experience.map((experience) => (
               <Content key={experience.company}>
-                <div className="my-10">
+                <div className="my-5">
                   <div className="font-medium">{experience.company}</div>
-                  <div className="font-normal text-xl leading-11 ">
+                  <div className="font-normal md:text-xl text-base leading-11 ">
                     {experience.designation}
                   </div>
                   <div className="flex flex-1">

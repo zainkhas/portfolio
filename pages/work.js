@@ -55,7 +55,10 @@ const Work = ({ menu, projects, images }) => {
       <Section>
         <Content>
           {projects.map((item, index) => (
-            <div className="flex items-center my-10" key={item.name}>
+            <div
+              className="flex lg:flex-row md:flex-col flex-col items-center my-10 md:my-20 mt-20 md:mt-10"
+              key={item.name}
+            >
               <div className="flex-1">
                 <Title>{item.name}</Title>
                 <div className="my-5 mr-2 text-primary">

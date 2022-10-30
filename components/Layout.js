@@ -15,7 +15,7 @@ export default function Layout({
   description,
 }) {
   return (
-    <div className="container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 sm:px-20">
+    <div className="container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 md:px-20">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -35,7 +35,7 @@ export default function Layout({
       <header>
         <NavBar menu={menu} />
         {home ? (
-          <div className="flex flex-row items-center">
+          <div className="flex md:flex-row flex-col items-center">
             <Image
               priority
               src="/images/profile.png"
@@ -44,11 +44,11 @@ export default function Layout({
               alt=""
               className="rounded-[80px]"
             />
-            <div className="ml-5">
-              <h1 className="text-4xl font-bold text-title">
+            <div className="md:ml-5 mt-4 text-center md:text-left">
+              <h1 className="md:text-4xl text-2xl font-bold text-title">
                 {metaData.fullName}
               </h1>
-              <h3 className="text-xl text-title font-normal leading-10">
+              <h3 className="md:text-xl text-lg text-title font-normal leading-10">
                 {metaData.designation}{" "}
                 <a href={metaData.company_url} target="_blank" rel="noreferrer">
                   <span className=" text-secondary">{`@${metaData.company}`}</span>
@@ -58,8 +58,10 @@ export default function Layout({
           </div>
         ) : (
           <div>
-            <h1 className="text-4xl font-bold text-title">{title}</h1>
-            <div className="text-xl text-title font-normal leading-10">
+            <h1 className="md:text-4xl text-2xl font-bold text-title">
+              {title}
+            </h1>
+            <div className="md:text-xl  text-base text-title font-normal leading-10 mt-5">
               {description}
             </div>
           </div>

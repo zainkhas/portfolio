@@ -1,7 +1,7 @@
 import React from "react";
 const Content = ({ children }) => {
   return (
-    <div className="my-2 font-normal text-xl leading-10 text-primary">
+    <div className="my-2 font-normal md:text-xl text-base md:leading-10 leading-9 text-primary">
       {children}
     </div>
   );

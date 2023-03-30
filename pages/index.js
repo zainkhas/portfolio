@@ -33,7 +33,7 @@ export default function Home({ about, metaData, menu, footer }) {
         <Title>About me</Title>
         <Content>
           <div
-            className="text-primary"
+            className="text-primary dark:text-primary-dark "
             dangerouslySetInnerHTML={{ __html: about.contentHtml }}
           />
         </Content>
@@ -42,7 +42,7 @@ export default function Home({ about, metaData, menu, footer }) {
         <Title>Contact</Title>
         <Content>
           <div
-            className="text-primary"
+            className="text-primary dark:text-primary-dark "
             dangerouslySetInnerHTML={{ __html: footer.contentHtml }}
           />
           <Social links={metaData.social_links} />

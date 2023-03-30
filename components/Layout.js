@@ -38,30 +38,30 @@ export default function Layout({
           <div className="flex md:flex-row flex-col items-center">
             <Image
               priority
-              src="/images/profile.png"
+              src="/images/zain.png"
               height={140}
               width={140}
               alt=""
               className="rounded-[80px]"
             />
             <div className="md:ml-5 mt-4 text-center md:text-left">
-              <h1 className="md:text-4xl text-2xl font-bold text-title">
+              <h1 className="md:text-4xl text-2xl font-bold text-title dark:text-title-dark">
                 {metaData.fullName}
               </h1>
-              <h3 className="md:text-xl text-lg text-title font-normal leading-10">
+              <h3 className="md:text-xl text-lg text-title dark:text-title-dark font-normal leading-10">
                 {metaData.designation}{" "}
                 <a href={metaData.company_url} target="_blank" rel="noreferrer">
-                  <span className=" text-secondary">{`@${metaData.company}`}</span>
+                  <span className=" text-secondary dark:text-secondary-dark">{`@${metaData.company}`}</span>
                 </a>
               </h3>
             </div>
           </div>
         ) : (
           <div>
-            <h1 className="md:text-4xl text-2xl font-bold text-title">
+            <h1 className="md:text-4xl text-2xl font-bold text-title dark:text-title-dark">
               {title}
             </h1>
-            <div className="md:text-xl  text-base text-title font-normal leading-10 mt-5">
+            <div className="md:text-xl  text-base text-title dark:text-title-dark font-normal leading-10 mt-5">
               {description}
             </div>
           </div>

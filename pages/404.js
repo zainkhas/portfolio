@@ -2,7 +2,7 @@ export default function Custom404() {
   return (
     <div>
       <div className="flex flex-1 flex-col justify-center items-center h-full">
-        <h1 className="text-4xl font-bold text-title">
+        <h1 className="text-4xl font-bold text-title dark:text-title-dark">
           This page is not ready yet
         </h1>
         <p>Hold on! I'm still working on this.</p>

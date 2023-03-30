@@ -78,17 +78,17 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
       </Head>
 
       <div>
-        <div className="bg-[#F9FAFB] md:py-20 py-10 md:px-14 px-5 rounded">
-          <h1 className="md:text-4xl text-2xl font-bold text-title">
+        <div className="bg-resumePaper dark:bg-resumePaper-dark md:py-20 py-10 md:px-14 px-5 rounded">
+          <h1 className="md:text-4xl text-2xl font-bold text-title dark:text-title-dark">
             {metaData.fullName}
           </h1>
-          <h3 className="text-secondary text-lg leading-10">
+          <h3 className="text-secondary dark:text-secondary-dark text-lg leading-10">
             {resume.tagline}
 
             <div className="mt-4">
               {resume.contact.map((contactItem) => (
                 <a
-                  className="flex items-center text-primary"
+                  className="flex items-center text-primary dark:text-primary-dark "
                   href={contactItem.url}
                   title={contactItem.name}
                   target="_blank"
@@ -140,7 +140,7 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
               <Content key={education.field}>
                 <div className="my-5">
                   <div className="font-medium">{education.field}</div>
-                  <div className="font-normal text-lg leading-11 text-secondary">
+                  <div className="font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
                     {education.duration}
                   </div>
                   <div className="font-normal text-xl leading-11">
@@ -161,12 +161,12 @@ const Resume = ({ menu, metaData, resume, skillColumns }) => {
                     {experience.designation}
                   </div>
                   <div className="flex flex-1">
-                    <div className="flex-1 font-normal text-lg leading-11 text-secondary">
+                    <div className="flex-1 font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
                       {`${tenure[experience.company].start} - ${
                         tenure[experience.company].end
                       }`}
                     </div>
-                    <div className="font-normal text-lg leading-11 text-secondary">
+                    <div className="font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
                       {tenure[experience.company].duration}
                     </div>
                   </div>

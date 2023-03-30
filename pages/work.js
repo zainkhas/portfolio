@@ -61,7 +61,7 @@ const Work = ({ menu, projects, images }) => {
             >
               <div className="flex-1">
                 <Title>{item.name}</Title>
-                <div className="my-5 mr-2 text-primary">
+                <div className="my-5 mr-2 text-primary dark:text-primary-dark ">
                   <p>{item.description}</p>
                   <div className="flex my-5 items-center">
                     {item.website && item.website.length > 0 && (

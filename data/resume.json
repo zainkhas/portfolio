@@ -17,12 +17,13 @@
       "icon": "icon_contact_linkedin.svg"
     }
   ],
-  "about": "I’m a Software Engineer with around 6 years experience of developing high quality mobile apps. I have been actively working on React Native apps for 3 years and have previously worked on Native Android apps as well as a variety of different technologies including PHP, Node.js, WebRTC, Socket.IO, Firebase, MongoDB,  etc.",
+  "about": "I’m a Software Engineer with around 7 years experience of developing high quality mobile apps. I have been actively working on React Native apps for 3 years and have previously worked on Native Android apps as well as a variety of different technologies including PHP, Node.js, WebRTC, Socket.IO, Firebase, MongoDB,  etc.",
   "skills": [
     "React Native",
+    "React",
+    "Next.js",
+    "Node.js",
     "Android",
-    "ReactJs",
-    "NodeJs",
     "Socket.IO",
     "WebRTC",
     "PHP",
@@ -43,10 +44,13 @@
   "experience": [
     {
       "company": "Dubizzle - EMPG Labs",
-      "designation": "Software Engineer",
+      "designation": "Senior Software Engineer",
       "joining_date": "22-09-2022",
       "exit_date": "",
-      "responsibilities": []
+      "responsibilities": [
+        "Develop new features on Dubizzle Frontend",
+        "Maintain existing functionality on Frontend"
+      ]
     },
     {
       "company": "WebHR",

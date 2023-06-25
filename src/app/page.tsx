@@ -5,6 +5,14 @@ import { Menu } from "@/components/Menu";
 import { MainHeader } from "@/components/MainHeader";
 import { Content } from "@/components/Content";
 import { SocialLinks } from "@/components/SocialLinks";
+import { Metadata } from "next";
+import { PAGE_TITLES } from "@/common/metaData";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: PAGE_TITLES.MAIN,
+  };
+};
 
 const getData = async () => {
   const about = await getAbout();

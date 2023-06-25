@@ -1,12 +1,19 @@
 import { Content } from "@/components/Content";
 import { H1 } from "@/components/Typography/H1";
-import { H4 } from "@/components/Typography/H4";
 import { getAll } from "@/lib/common";
 import { getResumeData } from "@/lib/resume";
 import Image from "next/image";
 import React from "react";
 import { getTenure } from "./helpers/getTenure";
 import { Menu } from "@/components/Menu";
+import { Metadata } from "next";
+import { PAGE_TITLES } from "@/common/metaData";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: PAGE_TITLES.RESUME,
+  };
+};
 
 const getData = async () => {
   const { menu, metaData } = await getAll();

@@ -1,5 +1,4 @@
-import React, { useCallback, useState } from "react";
-
+import React from "react";
 import { getAll } from "@/lib/common";
 import { getProjects } from "@/lib/projects";
 import { Content } from "@/components/Content";
@@ -8,6 +7,14 @@ import { IconButton } from "@/components/IconButton";
 import { ProjectThumb } from "./ProjectThumb";
 import { H1 } from "@/components/Typography/H1";
 import { Menu } from "@/components/Menu";
+import { Metadata } from "next";
+import { PAGE_TITLES } from "@/common/metaData";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: PAGE_TITLES.WORK,
+  };
+};
 
 const getData = async () => {
   const { menu } = await getAll();

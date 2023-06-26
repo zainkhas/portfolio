@@ -7,6 +7,7 @@ import { Content } from "@/components/Content";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Metadata } from "next";
 import { PAGE_TITLES } from "@/common/metaData";
+import { MainContent } from "@/components/MainContent";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -39,21 +40,11 @@ const Main = async () => {
         company={company}
         companyUrl={company_url}
       />
-      <Content title="About me">
-        <div
-          className="text-primary dark:text-primary-dark leading-10"
-          dangerouslySetInnerHTML={{ __html: about.contentHtml }}
-        />
-      </Content>
-      <Content title="Contact">
-        <div
-          id="contact"
-          className="text-primary dark:text-primary-dark leading-10"
-          dangerouslySetInnerHTML={{ __html: footer.contentHtml }}
-        />
-
+      <MainContent title="About me" html={about.contentHtml} />
+      <div id="contact">
+        <MainContent title="Contact" html={footer.contentHtml} />
         <SocialLinks links={social_links} />
-      </Content>
+      </div>
     </div>
   );
 };

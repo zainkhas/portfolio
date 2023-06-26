@@ -36,7 +36,6 @@ export default async function RootLayout({
       <body
         className={`${plusJakartaSans.className} container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 md:px-20`}
       >
-        <div className="text-primary-dark"> {children?.props.title}</div>
         <MenuComponent menu={menu} />
         {children}
       </body>

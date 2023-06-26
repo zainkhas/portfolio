@@ -43,6 +43,7 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
                 <Link
                   href={menuItem.page}
                   onClick={onClose}
+                  legacyBehavior
                   className={` text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:text-black hover:bg-transparent border-0 block pl-3 pr-4 py-2 md:p-0 ${
                     menuItem.page === pathname && "dark:text-gray-100"
                   }`}

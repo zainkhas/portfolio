@@ -1,13 +1,11 @@
 import React from "react";
 import { getAbout, getFooter } from "../lib/about";
 import { getAll } from "../lib/common";
-import { Menu } from "@/components/Menu";
 import { MainHeader } from "@/components/MainHeader";
-import { Content } from "@/components/Content";
 import { SocialLinks } from "@/components/SocialLinks";
+import { MainContent } from "@/components/MainContent";
 import { Metadata } from "next";
 import { PAGE_TITLES } from "@/common/metaData";
-import { MainContent } from "@/components/MainContent";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -28,12 +26,11 @@ const getData = async () => {
 };
 
 const Main = async () => {
-  const { about, metaData, menu, footer } = await getData();
+  const { about, metaData, footer } = await getData();
   const { title, designation, company, company_url, social_links } = metaData;
 
   return (
     <div className="flex flex-col flex-1 justify-center gap-10">
-      <Menu menu={menu} />
       <MainHeader
         fullName={title}
         designation={designation}

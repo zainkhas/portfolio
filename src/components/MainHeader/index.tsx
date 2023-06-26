@@ -24,8 +24,13 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
         <H1>{fullName}</H1>
         <H3>
           {designation}
-          <Link href={companyUrl} target="_blank" rel="noreferrer">
-            <span className=" text-secondary dark:text-secondary-dark">{` @${company}`}</span>
+          <Link
+            href={companyUrl}
+            target="_blank"
+            rel="noreferrer"
+            className=" text-secondary dark:text-secondary-dark"
+          >
+            {` @${company}`}
           </Link>
         </H3>
       </div>

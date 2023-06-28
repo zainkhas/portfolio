@@ -23,7 +23,7 @@ export const metadata = () => {
     alternates: {
       canonical: "/",
       languages: {
-        "en-US": "/en-US",
+        "en-US": "",
       },
     },
     openGraph: {

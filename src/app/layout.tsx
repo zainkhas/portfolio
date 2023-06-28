@@ -1,4 +1,9 @@
-import { PAGE_DESCRIPTIONS, PAGE_TITLES } from "@/common/metaData";
+import {
+  HOST,
+  MAIN_IMAGE_PATH,
+  PAGE_DESCRIPTIONS,
+  PAGE_TITLES,
+} from "@/common/metaData";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Menu as MenuComponent } from "@/components/Menu";
@@ -14,6 +19,16 @@ export const metadata = () => {
   return {
     title: PAGE_TITLES.MAIN,
     description: PAGE_DESCRIPTIONS.MAIN,
+    metadataBase: new URL(HOST),
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en-US": "/en-US",
+      },
+    },
+    openGraph: {
+      images: MAIN_IMAGE_PATH,
+    },
   };
 };
 

@@ -27,6 +27,10 @@ module.exports = {
           DEFAULT: "#F9FAFB",
           dark: "#232222",
         },
+        background: {
+          DEFAULT: "#FFFFFF",
+          dark: "#1b1b1b",
+        },
       },
 
       fontFamily: {

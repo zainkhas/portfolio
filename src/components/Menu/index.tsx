@@ -1,9 +1,11 @@
 "use client";
 import React, { memo, useEffect, useState } from "react";
 import { MenuProps } from "./types";
-import Link from "next/link";
 import MenuIcon from "./MenuIcon";
 import { usePathname } from "next/navigation";
+import { Box, Stack } from "@/components";
+import { MenuLink } from "./Menu.styled";
+import Link from "next/link";
 
 const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
   const [open, setOpen] = useState(false);
@@ -21,40 +23,40 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
     "flex flex-1 fixed right-0 top-[50px] bg-resumePaper dark:bg-resumePaper-dark w-full h-full py-8 px-6";
 
   return (
-    <nav className="border-gray-200">
-      <div className="container mx-auto flex flex-wrap items-center justify-end mt-8">
-        <div
-          onClick={onToggle}
-          className="cursor-pointer md:hidden block"
-          aria-hidden="true"
-        >
+    <Box component="nav">
+      <Stack
+        mx="auto"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="flex-end"
+        mt={4}
+      >
+        <Box onClick={onToggle} aria-hidden="true" display={{ md: "none" }}>
           <MenuIcon />
-        </div>
-        <ul
+        </Box>
+        <Stack
+          component="ul"
           id="menu"
-          className={`flex-col md:flex-row md:flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium ${
-            open ? stylesOpen : "hidden"
-          }`}
+          mt={0}
+          mb={0}
+          pl={0}
+          flexDirection={{ md: "row" }}
+          gap={4}
         >
           {menu
             ?.filter((item) => !item.hide)
             ?.map((menuItem) => (
-              <li key={menuItem.name}>
-                <Link
-                  href={menuItem.page}
-                  onClick={onClose}
-                  legacyBehavior
-                  className={` text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:text-black hover:bg-transparent border-0 block pl-3 pr-4 py-2 md:p-0 ${
-                    menuItem.page === pathname && "dark:text-gray-100"
-                  }`}
-                >
-                  {menuItem.name}
+              <Box component="li" display="block" key={menuItem.name}>
+                <Link href={menuItem.page} onClick={onClose} legacyBehavior>
+                  <MenuLink isActive={menuItem.page === pathname}>
+                    {menuItem.name}
+                  </MenuLink>
                 </Link>
-              </li>
+              </Box>
             ))}
-        </ul>
-      </div>
-    </nav>
+        </Stack>
+      </Stack>
+    </Box>
   );
 };
 

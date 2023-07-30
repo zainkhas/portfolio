@@ -1,10 +1,11 @@
-import Image from "next/image";
 import React from "react";
 import { MainHeaderProps } from "./types";
-import { H1 } from "../Typography/H1";
 import { H3 } from "../Typography/H3";
 import Link from "next/link";
 import { MAIN_IMAGE_PATH } from "@/common/metaData";
+import { Stack, Box, Typography } from "@/components";
+import { Avatar } from "./Avatar";
+
 export const MainHeader: React.FC<MainHeaderProps> = ({
   fullName,
   designation,
@@ -12,17 +13,18 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
   companyUrl,
 }) => {
   return (
-    <div className="gap-5 flex md:flex-row flex-col items-center">
-      <Image
+    <Stack flexDirection={{ md: "row" }} alignItems="center" gap={3}>
+      <Avatar
         priority
         src={MAIN_IMAGE_PATH}
         height={140}
         width={140}
         alt={fullName}
-        className="rounded-[80px]"
       />
-      <div className="text-center md:text-left">
-        <H1>{fullName}</H1>
+      <Box textAlign={{ xs: "center", md: "left" }}>
+        <Typography component="h1" variant="h1" color="title">
+          {fullName}
+        </Typography>
         <H3>
           {designation}
           <Link
@@ -34,7 +36,7 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
             {` @${company}`}
           </Link>
         </H3>
-      </div>
-    </div>
+      </Box>
+    </Stack>
   );
 };

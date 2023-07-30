@@ -6,6 +6,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { MainContent } from "@/components/MainContent";
 import { Metadata } from "next";
 import { PAGE_TITLES } from "@/common/metaData";
+import { Stack, Box } from "@/components";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -30,7 +31,7 @@ const Main = async () => {
   const { title, designation, company, company_url, social_links } = metaData;
 
   return (
-    <div className="flex flex-col flex-1 justify-center gap-10">
+    <Stack direction="column" justifyContent="center" gap={4}>
       <MainHeader
         fullName={title}
         designation={designation}
@@ -38,11 +39,11 @@ const Main = async () => {
         companyUrl={company_url}
       />
       <MainContent title="About me" html={about.contentHtml} />
-      <div id="contact">
+      <Box id="contact">
         <MainContent title="Contact" html={footer.contentHtml} />
         <SocialLinks links={social_links} />
-      </div>
-    </div>
+      </Box>
+    </Stack>
   );
 };
 

@@ -9,6 +9,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Menu as MenuComponent } from "@/components/Menu";
 import { Menu } from "@/common/types";
 import { getAll } from "@/lib/common";
+import ThemeRegistry from "@/components/ThemeRegistry";
+import { Stack } from "@/components";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -48,12 +50,14 @@ export default async function RootLayout({
   const { menu } = await getData();
   return (
     <html lang="en">
-      <body
-        className={`${plusJakartaSans.className} container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 md:px-20`}
-      >
-        <MenuComponent menu={menu} />
-        {children}
-      </body>
+      <ThemeRegistry options={{ key: "mui" }}>
+        <body className={`${plusJakartaSans.className}`}>
+          <Stack mx="auto" px={55}>
+            <MenuComponent menu={menu} />
+            {children}
+          </Stack>
+        </body>
+      </ThemeRegistry>
     </html>
   );
 }

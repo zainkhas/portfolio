@@ -25,9 +25,8 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
   return (
     <Box component="nav">
       <Stack
-        mx="auto"
         flexWrap="wrap"
-        alignItems="center"
+        alignItems="flex-end"
         justifyContent="flex-end"
         mt={4}
       >

@@ -1,7 +1,7 @@
 import { Images, Project } from "@/common/types";
 
-export type ProjectThumbProps = {
-  index: number;
+export type ProjectItemProps = {
   project: Project;
+  index: number;
   images: Images[];
 };

@@ -2,7 +2,9 @@
 import Image from "next/image";
 import React, { useCallback, useState } from "react";
 import ImgsViewer from "react-images-viewer";
+import { Box } from "@/components";
 import { ProjectThumbProps } from "./types";
+import { ThumbImage } from "./ProjectThumb.styled";
 
 export const ProjectThumb: React.FC<ProjectThumbProps> = ({
   project,
@@ -27,19 +29,23 @@ export const ProjectThumb: React.FC<ProjectThumbProps> = ({
 
   return (
     <>
-      <div
-        className="flex-1 ml-2 rounded-lg cursor-pointer hover:opacity-70"
+      <Box
+        flex={1}
+        sx={{
+          cursor: "pointer",
+          "&:hover": {
+            opacity: 0.7,
+          },
+        }}
         onClick={() => onImageCick(index)}
       >
-        <Image
+        <ThumbImage
           src={`/images/${project.image}`}
-          height={388}
-          width={550}
-          style={{ objectFit: "cover" }}
-          className="rounded-lg"
+          height={300}
+          width={400}
           alt={project.name}
         />
-      </div>
+      </Box>
       <ImgsViewer
         imgs={images}
         currImg={currImg}

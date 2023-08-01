@@ -31,7 +31,7 @@ const Main = async () => {
   const { title, designation, company, company_url, social_links } = metaData;
 
   return (
-    <Stack direction="column" justifyContent="center" gap={4}>
+    <Stack justifyContent="center" gap={4}>
       <MainHeader
         fullName={title}
         designation={designation}

@@ -1,6 +1,5 @@
 import React from "react";
 import { MainHeaderProps } from "./types";
-import { H3 } from "../Typography/H3";
 import Link from "next/link";
 import { MAIN_IMAGE_PATH } from "@/common/metaData";
 import { Stack, Box, Typography } from "@/components";
@@ -13,30 +12,25 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
   companyUrl,
 }) => {
   return (
-    <Stack flexDirection={{ md: "row" }} alignItems="center" gap={3}>
+    <Stack flexDirection={{ md: "row" }} alignItems="center" gap={2}>
       <Avatar
         priority
         src={MAIN_IMAGE_PATH}
-        height={140}
-        width={140}
+        height={125}
+        width={125}
         alt={fullName}
       />
-      <Box textAlign={{ xs: "center", md: "left" }}>
+      <Stack textAlign={{ xs: "center", md: "left" }} gap={1}>
         <Typography component="h1" variant="h1" color="title">
           {fullName}
         </Typography>
-        <H3>
+        <Typography component="h3" variant="h3" color="title">
           {designation}
-          <Link
-            href={companyUrl}
-            target="_blank"
-            rel="noreferrer"
-            className=" text-secondary dark:text-secondary-dark"
-          >
+          <Link href={companyUrl} target="_blank" rel="noreferrer">
             {` @${company}`}
           </Link>
-        </H3>
-      </Box>
+        </Typography>
+      </Stack>
     </Stack>
   );
 };

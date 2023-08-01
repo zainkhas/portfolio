@@ -68,3 +68,7 @@ export interface MetaData {
   phone_number: string;
   social_links: Contact[];
 }
+
+export interface Images {
+  src: string;
+}

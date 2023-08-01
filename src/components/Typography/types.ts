@@ -1,4 +1,4 @@
-import { BoxProps } from "@/components";
+import { BoxProps, SxProps } from "@/components";
 
 export interface TypographyProps extends BoxProps {
   variant?:
@@ -21,4 +21,5 @@ export interface TypographyProps extends BoxProps {
   gutterBottom?: boolean;
   noWrap?: boolean;
   paragraph?: boolean;
+  sx?: SxProps;
 }

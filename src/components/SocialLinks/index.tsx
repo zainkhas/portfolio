@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { SocialLinksProps } from "./types";
+import { Stack } from "@/components";
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
   return (
-    <div className="flex items-center my-5">
+    <Stack direction="row" alignItems="center" gap={1} my={3}>
       {links.map((link) => (
         <a
-          className="ml-2"
           href={link.url}
           key={link.name}
           title={link.name}
@@ -22,6 +22,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
           />
         </a>
       ))}
-    </div>
+    </Stack>
   );
 };

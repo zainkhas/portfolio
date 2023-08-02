@@ -25,7 +25,7 @@ export interface Project {
 
 export interface Projects extends Array<Project> {}
 
-interface Contact {
+export interface Contact {
   name: string;
   url: string;
   icon: string;

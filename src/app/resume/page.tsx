@@ -7,6 +7,9 @@ import React from "react";
 import { getTenure } from "./helpers/getTenure";
 import { Metadata } from "next";
 import { PAGE_TITLES } from "@/common/metaData";
+import { Box, Stack, Typography } from "@/components";
+import ResumeHead from "./ResumeHead";
+import Skills from "./Skills";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -31,101 +34,62 @@ const getData = async () => {
   };
 };
 const Resume = async () => {
-  const { menu, metaData, resume, skillColumns, tenure } = await getData();
+  const { metaData, resume, skillColumns, tenure } = await getData();
   return (
-    <div className="bg-resumePaper dark:bg-resumePaper-dark md:py-20 py-10 md:px-14 px-5 rounded gap-6 flex flex-col my-11">
-      <div className="flex flex-col gap-4">
-        <H1>{metaData.full_name}</H1>
-        <h3 className="text-secondary dark:text-secondary-dark text-lg leading-10">
-          {resume.tagline}
-        </h3>
+    <Stack bgcolor="resumePaper" my={5} py={10} px={7} gap={4} borderRadius={1}>
+      <ResumeHead
+        fullName={metaData?.full_name}
+        tagLine={resume?.tagline}
+        contact={resume?.contact}
+      />
 
-        <div className="flex flex-col gap-2">
-          {resume.contact.map((contactItem) => (
-            <a
-              key={contactItem.name}
-              className="flex items-center text-primary dark:text-primary-dark "
-              href={contactItem.url}
-              title={contactItem.name}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex items-center mr-2">
-                <Image
-                  src={`/svg/${contactItem.icon}`}
-                  alt={contactItem.name}
-                  height={24}
-                  width={24}
-                />
-              </div>
-
-              {contactItem.name}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <Content>{resume.about}</Content>
-      <Content title="Skills">
-        <div className="flex flex-row">
-          <div className="flex flex-1">
-            <ul className="list-disc list-inside">
-              {skillColumns.left.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex flex-1">
-            <ul className="list-disc list-inside">
-              {skillColumns.right.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <Content>
+        <Typography>{resume.about}</Typography>
       </Content>
 
-      <Content title="Education">
+      <Skills skills={resume.skills} />
+      {/* 
+      <Content title="Education" gap={2}>
         {resume.education.map((education) => (
-          <div key={education.field}>
-            <div className="font-medium">{education.field}</div>
-            <div className="font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
-              {education.duration}
-            </div>
-            <div className="font-normal text-xl leading-11">
-              {education.institute}
-            </div>
-          </div>
+          <Box key={education.field}>
+            <Typography>{education.field}</Typography>
+            <Typography>{education.duration}</Typography>
+            <Typography>{education.institute}</Typography>
+          </Box>
         ))}
-      </Content>
+      </Content> */}
 
-      <Content title="Experience">
+      {/* <Content title="Experience" gap={2}>
         {resume.experience.map((experience) => (
-          <div key={experience.company}>
-            <div className="font-medium">{experience.company}</div>
-            <div className="font-normal md:text-xl text-base leading-11 ">
-              {experience.designation}
-            </div>
-            <div className="flex flex-1">
-              <div className="flex-1 font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
+          <Box key={experience.company}>
+            <Typography>{experience.company}</Typography>
+            <Typography>{experience.designation}</Typography>
+            <Stack flex={1}>
+              <Typography>
                 {`${tenure[experience.company].start} - ${
                   tenure[experience.company].end
                 }`}
-              </div>
-              <div className="font-normal text-lg leading-11 text-secondary dark:text-secondary-dark">
-                {tenure[experience.company].duration}
-              </div>
-            </div>
-            <ul className="list-disc list-inside mt-5 mb-10">
+              </Typography>
+              <Typography>{tenure[experience.company].duration}</Typography>
+            </Stack>
+            <Stack component="ul" gap={1}>
               {experience.responsibilities &&
                 experience.responsibilities.map((resp) => (
-                  <li key={resp}>{resp}</li>
+                  <Typography
+                    component="li"
+                    key={resp}
+                    sx={{
+                      listStylePosition: "inside",
+                    }}
+                  >
+                    {resp}
+                  </Typography>
                 ))}
-            </ul>
-          </div>
+            </Stack>
+          </Box>
         ))}
-      </Content>
-    </div>
+      </Content> */}
+    </Stack>
   );
 };
 

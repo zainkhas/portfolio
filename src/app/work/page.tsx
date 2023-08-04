@@ -4,7 +4,7 @@ import { Content } from "@/components/Content";
 
 import { Metadata } from "next";
 import { PAGE_TITLES } from "@/common/metaData";
-import { Box, Stack, Typography } from "@/components";
+import { Stack, Typography } from "@/components";
 import ProjectItem from "./ProjectItem";
 
 export const generateMetadata = (): Metadata => {
@@ -27,14 +27,14 @@ const Work = async () => {
 
   return (
     <Stack my={5} gap={3}>
-      <Box>
+      <>
         <Typography variant="h1" component="h1">
           Projects
         </Typography>
         <Typography my={2}>
           These are the apps that I have worked on during my career
         </Typography>
-      </Box>
+      </>
       <Content gap={6}>
         {projects.map((item, index) => (
           <ProjectItem

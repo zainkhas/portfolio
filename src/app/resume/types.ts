@@ -1,4 +1,4 @@
-import { Contact } from "@/common/types";
+import { Contact, Education, Experience } from "@/common/types";
 
 export type ResumeHeadProps = {
   fullName: string;
@@ -8,4 +8,13 @@ export type ResumeHeadProps = {
 
 export type SkillsProps = {
   skills: string[];
+};
+
+export type EducationProps = {
+  education: Education[];
+};
+
+export type ExperienceProps = {
+  experience: Experience[];
+  tenure: Record<string, any>;
 };

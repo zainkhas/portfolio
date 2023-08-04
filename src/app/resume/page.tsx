@@ -10,6 +10,8 @@ import { PAGE_TITLES } from "@/common/metaData";
 import { Box, Stack, Typography } from "@/components";
 import ResumeHead from "./ResumeHead";
 import Skills from "./Skills";
+import Education from "./Education";
+import Experience from "./Experience";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -36,7 +38,7 @@ const getData = async () => {
 const Resume = async () => {
   const { metaData, resume, skillColumns, tenure } = await getData();
   return (
-    <Stack bgcolor="resumePaper" my={5} py={10} px={7} gap={4} borderRadius={1}>
+    <Stack bgcolor="resumePaper" my={5} py={10} px={7} gap={6} borderRadius={1}>
       <ResumeHead
         fullName={metaData?.full_name}
         tagLine={resume?.tagline}
@@ -48,47 +50,10 @@ const Resume = async () => {
       </Content>
 
       <Skills skills={resume.skills} />
-      {/* 
-      <Content title="Education" gap={2}>
-        {resume.education.map((education) => (
-          <Box key={education.field}>
-            <Typography>{education.field}</Typography>
-            <Typography>{education.duration}</Typography>
-            <Typography>{education.institute}</Typography>
-          </Box>
-        ))}
-      </Content> */}
 
-      {/* <Content title="Experience" gap={2}>
-        {resume.experience.map((experience) => (
-          <Box key={experience.company}>
-            <Typography>{experience.company}</Typography>
-            <Typography>{experience.designation}</Typography>
-            <Stack flex={1}>
-              <Typography>
-                {`${tenure[experience.company].start} - ${
-                  tenure[experience.company].end
-                }`}
-              </Typography>
-              <Typography>{tenure[experience.company].duration}</Typography>
-            </Stack>
-            <Stack component="ul" gap={1}>
-              {experience.responsibilities &&
-                experience.responsibilities.map((resp) => (
-                  <Typography
-                    component="li"
-                    key={resp}
-                    sx={{
-                      listStylePosition: "inside",
-                    }}
-                  >
-                    {resp}
-                  </Typography>
-                ))}
-            </Stack>
-          </Box>
-        ))}
-      </Content> */}
+      <Education education={resume.education} />
+
+      <Experience experience={resume.experience} tenure={tenure} />
     </Stack>
   );
 };

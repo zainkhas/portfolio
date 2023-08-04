@@ -52,7 +52,11 @@ export default async function RootLayout({
     <html lang="en">
       <ThemeRegistry options={{ key: "mui" }}>
         <body className={`${plusJakartaSans.className}`}>
-          <Stack mx="auto" px={44}>
+          <Stack
+            mx="auto"
+            px={{ xs: 4, md: 10, lg: 44 }}
+            maxWidth={{ xxl: 0.7 }}
+          >
             <MenuComponent menu={menu} />
             {children}
           </Stack>

@@ -31,13 +31,13 @@ export interface Contact {
   icon: string;
 }
 
-interface Education {
+export interface Education {
   field: string;
   duration: string;
   institute: string;
 }
 
-interface Experience {
+export interface Experience {
   company: string;
   designation: string;
   joining_date: string;
@@ -71,4 +71,11 @@ export interface MetaData {
 
 export interface Images {
   src: string;
+}
+
+export interface ResponsiveValues {
+  xs?: number | string;
+  sm?: number | string;
+  md?: number | string;
+  lg?: number | string;
 }

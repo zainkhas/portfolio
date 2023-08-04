@@ -1,10 +1,12 @@
 "use client";
-import Image from "next/image";
 import React, { useCallback, useState } from "react";
-import ImgsViewer from "react-images-viewer";
 import { Box } from "@/components";
 import { ProjectThumbProps } from "./types";
 import { ThumbImage } from "./ProjectThumb.styled";
+import useScreenType from "@/hooks/useScreenType";
+import dynamic from "next/dynamic";
+
+const ImgsViewer = dynamic(() => import("react-images-viewer"), { ssr: false });
 
 export const ProjectThumb: React.FC<ProjectThumbProps> = ({
   project,
@@ -13,6 +15,7 @@ export const ProjectThumb: React.FC<ProjectThumbProps> = ({
 }) => {
   const [currImg, setCurrImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const { isMobile } = useScreenType();
 
   const onCloseImageViewer = useCallback(() => {
     setViewerIsOpen(false);
@@ -30,7 +33,6 @@ export const ProjectThumb: React.FC<ProjectThumbProps> = ({
   return (
     <>
       <Box
-        flex={1}
         sx={{
           cursor: "pointer",
           "&:hover": {
@@ -39,21 +41,28 @@ export const ProjectThumb: React.FC<ProjectThumbProps> = ({
         }}
         onClick={() => onImageCick(index)}
       >
-        <ThumbImage
-          src={`/images/${project.image}`}
-          height={300}
-          width={400}
-          alt={project.name}
-        />
+        <Box
+          position="relative"
+          width={{ xs: 327, md: 400 }}
+          height={{ xs: 245, md: 300 }}
+        >
+          <ThumbImage
+            src={`/images/${project.image}`}
+            alt={project.name}
+            fill
+          />
+        </Box>
       </Box>
-      <ImgsViewer
-        imgs={images}
-        currImg={currImg}
-        isOpen={viewerIsOpen}
-        onClose={onCloseImageViewer}
-        onClickPrev={onPrevImage}
-        onClickNext={onNextImage}
-      />
+      {viewerIsOpen && (
+        <ImgsViewer
+          imgs={images}
+          currImg={currImg}
+          isOpen={viewerIsOpen}
+          onClose={onCloseImageViewer}
+          onClickPrev={onPrevImage}
+          onClickNext={onNextImage}
+        />
+      )}
     </>
   );
 };

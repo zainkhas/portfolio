@@ -3,7 +3,7 @@ import { ContentProps } from "./types";
 import { Box, Stack, Typography } from "@/components";
 
 export const Content: React.FC<ContentProps> = ({ children, title, gap }) => (
-  <Stack gap={1}>
+  <Stack gap={2}>
     {title && (
       <Typography variant="h4" component="h4">
         {title}

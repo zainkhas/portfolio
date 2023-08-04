@@ -22,4 +22,13 @@ export const typography: TypographyTheme = {
     lineHeight: "40px",
     fontWeight: 400,
   },
+  medium: {
+    fontSize: 20,
+    lineHeight: "40px",
+    fontWeight: 500,
+  },
+  small: {
+    fontSize: 18,
+    lineHeight: "28px",
+  },
 };

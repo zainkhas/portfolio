@@ -10,7 +10,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   images,
 }) => {
   return (
-    <Stack gap={3} direction={{ md: "row" }} alignItems="center">
+    <Stack
+      gap={3}
+      direction={{ xs: "column-reverse", lg: "row" }}
+      alignItems="center"
+    >
       <Stack flex={1} gap={2}>
         <Typography component="h4" variant="h4">
           {project.name}

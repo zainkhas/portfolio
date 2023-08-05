@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Grid, Stack, Typography } from "@/components";
+import { Grid, Typography } from "@/components";
 import { SkillsProps } from "./types";
 import { Content } from "@/components/Content";
 

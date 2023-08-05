@@ -4,8 +4,7 @@ import { typography } from "@/theme/typography";
 
 export const Typography: React.FC<TypographyProps> = (props) => {
   const { variant = "body1", component = "p", sx, ...rest } = props;
-  const variantStyles: TypographySxProps = { variant, ...typography[variant] };
-
+  const variantStyles: TypographySxProps = typography[variant];
   return (
     <Box component={component} sx={{ ...variantStyles, ...sx }} {...rest} />
   );

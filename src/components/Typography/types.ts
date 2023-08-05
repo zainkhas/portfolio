@@ -12,6 +12,4 @@ export interface TypographyProps extends BoxProps {
   sx?: SxProps;
 }
 
-export type TypographySxProps = SxProps & {
-  variant: keyof TypographyTheme;
-};
+export type TypographySxProps = SxProps & TypographyTheme;

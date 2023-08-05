@@ -10,6 +10,6 @@ type TypographyStyle = {
   fontWeight?: number | string | ResponsiveValues;
 };
 
-export interface TypographyTheme {
-  [key: string]: number | TypographyStyle | undefined;
-}
+export type TypographyTheme = {
+  [variant: string]: TypographyStyle;
+};

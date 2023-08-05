@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ResponsiveValues } from "@/common/types";
 
 export enum theme_modes {

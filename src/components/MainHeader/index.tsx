@@ -2,7 +2,7 @@ import React from "react";
 import { MainHeaderProps } from "./types";
 import Link from "next/link";
 import { MAIN_IMAGE_PATH } from "@/common/metaData";
-import { Stack, Box, Typography } from "@/components";
+import { Stack, Typography } from "@/components";
 import { Avatar } from "./Avatar";
 
 export const MainHeader: React.FC<MainHeaderProps> = ({

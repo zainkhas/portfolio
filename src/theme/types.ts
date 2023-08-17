@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ResponsiveValues } from "@/common/types";
 
 export enum theme_modes {
@@ -10,6 +11,6 @@ type TypographyStyle = {
   fontWeight?: number | string | ResponsiveValues;
 };
 
-export interface TypographyTheme {
-  [key: string]: number | TypographyStyle | undefined;
-}
+export type TypographyTheme = {
+  [variant: string]: TypographyStyle;
+};

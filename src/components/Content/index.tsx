@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentProps } from "./types";
-import { Box, Stack, Typography } from "@/components";
+import { Stack, Typography } from "@/components";
 
 export const Content: React.FC<ContentProps> = ({ children, title, gap }) => (
   <Stack gap={2}>

@@ -4,10 +4,12 @@ import createCache from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";
 import { CacheProvider, ThemeProvider } from "@emotion/react";
 import { theme } from "@/theme";
+import { theme_modes } from "@/theme/types";
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
-
+  const dark = useDarkMode();
   const [{ cache, flush }] = React.useState(() => {
     const cache = createCache(options);
     cache.compat = true;
@@ -50,7 +52,9 @@ export default function ThemeRegistry(props: any) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme(dark ? theme_modes.dark : theme_modes.light)}>
+        {children}
+      </ThemeProvider>
     </CacheProvider>
   );
 }

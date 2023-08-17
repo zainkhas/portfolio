@@ -3,7 +3,6 @@ import React, { useCallback, useState } from "react";
 import { Box } from "@/components";
 import { ProjectThumbProps } from "./types";
 import { ThumbImage } from "./ProjectThumb.styled";
-import useScreenType from "@/hooks/useScreenType";
 import dynamic from "next/dynamic";
 
 const ImgsViewer = dynamic(() => import("react-images-viewer"), { ssr: false });
@@ -15,7 +14,6 @@ export const ProjectThumb: React.FC<ProjectThumbProps> = ({
 }) => {
   const [currImg, setCurrImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
-  const { isMobile } = useScreenType();
 
   const onCloseImageViewer = useCallback(() => {
     setViewerIsOpen(false);

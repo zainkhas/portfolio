@@ -1,20 +1,8 @@
 import { BoxProps, SxProps } from "@/components";
+import { TypographyTheme } from "@/theme/types";
 
 export interface TypographyProps extends BoxProps {
-  variant?:
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "body1"
-    | "body2"
-    | "subtitle1"
-    | "subtitle2"
-    | "caption"
-    | "overline"
-    | string;
+  variant?: keyof TypographyTheme;
   component?: React.ElementType;
   align?: "left" | "center" | "right" | "justify";
   color?: string;
@@ -23,3 +11,5 @@ export interface TypographyProps extends BoxProps {
   paragraph?: boolean;
   sx?: SxProps;
 }
+
+export type TypographySxProps = SxProps & TypographyTheme;

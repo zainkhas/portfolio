@@ -16,7 +16,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       alignItems="center"
     >
       <Stack flex={1} gap={2}>
-        <Typography component="h4" variant="h4">
+        <Typography component="h2" variant="h4">
           {project.name}
         </Typography>
         <Stack gap={2}>

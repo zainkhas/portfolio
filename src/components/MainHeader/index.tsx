@@ -24,7 +24,7 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
         <Typography component="h1" variant="h1" color="title">
           {fullName}
         </Typography>
-        <Typography component="h3" variant="h3" color="title">
+        <Typography component="h2" variant="h2" color="title">
           {designation}
           <Link href={companyUrl} target="_blank" rel="noreferrer">
             {` @${company}`}

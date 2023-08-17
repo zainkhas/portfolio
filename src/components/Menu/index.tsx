@@ -40,7 +40,7 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
             ?.filter((item) => !item.hide)
             ?.map((menuItem) => (
               <Stack component="li" key={menuItem.name} alignItems={"flex-end"}>
-                <Link href={menuItem.page} legacyBehavior>
+                <Link href={menuItem.page}>
                   <MenuLink
                     onClick={onClose}
                     isActive={menuItem.page === pathname}

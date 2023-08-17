@@ -1,7 +1,7 @@
 import { applyColor } from "@/helpers/themeHelpers";
 import { styled } from "@mui/system";
 
-export const MenuLink = styled("a")<{ isActive?: boolean }>`
+export const MenuLink = styled("span")<{ isActive?: boolean }>`
   cursor: pointer;
   color: ${({ isActive }) =>
     applyColor(isActive ? "menuLinkSelected" : "menuLink")};

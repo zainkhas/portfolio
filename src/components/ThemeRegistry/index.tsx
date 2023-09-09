@@ -1,16 +1,16 @@
 "use client";
-import React from "react";
 import createCache from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";
 import { CacheProvider, ThemeProvider } from "@emotion/react";
 import { theme } from "@/theme";
 import { theme_modes } from "@/theme/types";
-import { useDarkMode } from "@/hooks/useDarkMode";
+import { useContext, useState } from "react";
+import { ThemeContext } from "@/context/themecontext/ThemeContext";
 
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
-  const dark = useDarkMode();
-  const [{ cache, flush }] = React.useState(() => {
+  const { isDark } = useContext(ThemeContext);
+  const [{ cache, flush }] = useState(() => {
     const cache = createCache(options);
     cache.compat = true;
     const prevInsert = cache.insert;
@@ -52,7 +52,9 @@ export default function ThemeRegistry(props: any) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={theme(dark ? theme_modes.dark : theme_modes.light)}>
+      <ThemeProvider
+        theme={theme(isDark ? theme_modes.dark : theme_modes.light)}
+      >
         {children}
       </ThemeProvider>
     </CacheProvider>

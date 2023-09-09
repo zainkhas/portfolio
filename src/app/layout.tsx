@@ -10,7 +10,11 @@ import { Menu as MenuComponent } from "@/components/Menu";
 import { Menu } from "@/common/types";
 import { getAll } from "@/lib/common";
 import ThemeRegistry from "@/components/ThemeRegistry";
-import { Stack } from "@/components";
+import { Box, Stack } from "@/components";
+import { cookies } from "next/headers";
+import ThemeWrapper from "@/components/ThemeWrapper/ThemeWrapper";
+import { COOKIE_DARK_THEME } from "@/common/constants";
+import { theme_modes } from "@/theme/types";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -48,20 +52,30 @@ export default async function RootLayout({
   menu: Menu;
 }) {
   const { menu } = await getData();
+  const theme = cookies().get(COOKIE_DARK_THEME)?.value;
+  const isDark = theme === `${theme_modes.dark}`;
+
   return (
     <html lang="en">
-      <ThemeRegistry options={{ key: "mui" }}>
-        <body className={`${plusJakartaSans.className}`}>
-          <Stack
-            mx="auto"
-            px={{ xs: 4, md: 10, lg: 44 }}
-            maxWidth={{ xxl: 0.7 }}
+      <ThemeWrapper isDark={isDark}>
+        <ThemeRegistry options={{ key: "mui" }}>
+          <Box
+            className={`${plusJakartaSans.className}`}
+            component="body"
+            bgcolor="background"
+            color="text"
           >
-            <MenuComponent menu={menu} />
-            {children}
-          </Stack>
-        </body>
-      </ThemeRegistry>
+            <Stack
+              mx="auto"
+              px={{ xs: 4, md: 10, lg: 44 }}
+              maxWidth={{ xxl: 0.7 }}
+            >
+              <MenuComponent menu={menu} />
+              {children}
+            </Stack>
+          </Box>
+        </ThemeRegistry>
+      </ThemeWrapper>
     </html>
   );
 }

@@ -7,6 +7,7 @@ import { Box, Stack } from "@/components";
 import { MenuLink } from "./Menu.styled";
 import Link from "next/link";
 import { menuCloseStyles, menuOpenStyles } from "./styles";
+import { ThemeToggle } from "../ThemeToggle";
 
 const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
   const [open, setOpen] = useState(false);
@@ -51,6 +52,7 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
               </Stack>
             ))}
         </Stack>
+        <ThemeToggle />
       </Stack>
     </Box>
   );

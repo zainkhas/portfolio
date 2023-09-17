@@ -25,9 +25,11 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
     <Box component="nav">
       <Stack
         flexWrap="wrap"
-        alignItems="flex-end"
-        justifyContent="flex-end"
+        alignItems="center"
+        justifyContent={{ md: "flex-end", xs: "space-between" }}
         mt={4}
+        direction={{ md: "row", xs: "row-reverse" }}
+        gap={2}
       >
         <Box onClick={onToggle} aria-hidden="true" display={{ md: "none" }}>
           <MenuIcon />

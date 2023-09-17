@@ -2,8 +2,9 @@ import { SxProps } from "@/components";
 
 const baseMenuStyles: SxProps = {
   gap: { xs: 1, md: 4 },
-  py: { xs: 4, md: 0 },
+  py: { xs: 2, md: 0 },
   px: 3,
+  mt: { xs: 1 },
 };
 
 export const menuOpenStyles: SxProps = {

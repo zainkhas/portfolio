@@ -51,6 +51,8 @@ a {
   width: 46px;
   transform: scale(1.5);
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .label:hover {

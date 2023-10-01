@@ -18,7 +18,7 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
   const onClose = () => setOpen(false);
 
   useEffect(() => {
-    // document.body.style.overflowY = open ? "hidden" : "scoll";
+    document.body.style.overflowY = open ? "hidden" : "unset";
   }, [open]);
 
   return (

@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { ResponsiveValues } from "@/common/types";
-
+import { ResponsiveStyleValue } from "@/components";
 export enum theme_modes {
   light,
   dark,
 }
 type TypographyStyle = {
-  fontSize?: number | string | ResponsiveValues;
-  lineHeight?: number | string | ResponsiveValues;
-  fontWeight?: number | string | ResponsiveValues;
+  fontSize?: number | string | ResponsiveStyleValue<any>;
+  lineHeight?: number | string | ResponsiveStyleValue<any>;
+  fontWeight?: number | string | ResponsiveStyleValue<any>;
 };
 
 export type TypographyTheme = {

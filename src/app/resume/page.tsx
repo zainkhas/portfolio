@@ -36,7 +36,14 @@ const getData = async () => {
 const Resume = async () => {
   const { metaData, resume, tenure } = await getData();
   return (
-    <Stack bgcolor="resumePaper" my={5} py={10} px={7} gap={6} borderRadius={1}>
+    <Stack
+      bgcolor="resumePaper"
+      my={{ md: 5, xs: 2 }}
+      py={{ md: 10, xs: 5 }}
+      px={{ md: 7, xs: 3 }}
+      gap={{ md: 6, xs: 4 }}
+      borderRadius={1}
+    >
       <ResumeHead
         fullName={metaData?.full_name}
         tagLine={resume?.tagline}

@@ -35,7 +35,7 @@ const Work = async () => {
           These are the apps that I have worked on during my career
         </Typography>
       </>
-      <Content gap={6}>
+      <Content gap={{ md: 6, xs: 4 }}>
         {projects.map((item, index) => (
           <ProjectItem
             key={item.name}

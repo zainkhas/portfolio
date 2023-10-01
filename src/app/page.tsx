@@ -15,9 +15,15 @@ export const generateMetadata = (): Metadata => {
 };
 
 const getData = async () => {
-  const about = await getAbout();
-  const footer = await getFooter();
-  const { metaData, menu } = await getAll();
+  const aboutPromise = getAbout();
+  const footerPromise = getFooter();
+  const allPromise = getAll();
+
+  const [about, footer, { metaData, menu }] = await Promise.all([
+    aboutPromise,
+    footerPromise,
+    allPromise,
+  ]);
   return {
     about,
     metaData,

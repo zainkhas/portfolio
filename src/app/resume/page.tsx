@@ -18,8 +18,12 @@ export const generateMetadata = (): Metadata => {
 };
 
 const getData = async () => {
-  const { menu, metaData } = await getAll();
-  const resume = await getResumeData();
+  const allPromise = getAll();
+  const resumePromise = getResumeData();
+  const [{ menu, metaData }, resume] = await Promise.all([
+    allPromise,
+    resumePromise,
+  ]);
   const skillColumns = {
     left: resume.skills.splice(0, resume.skills.length / 2),
     right: resume.skills,

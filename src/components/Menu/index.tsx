@@ -22,7 +22,7 @@ const MenuComponent: React.FC<MenuProps> = ({ menu }) => {
   }, [open]);
 
   return (
-    <Box component="nav">
+    <Box component="nav" zIndex={200}>
       <Stack
         flexWrap="wrap"
         alignItems="center"

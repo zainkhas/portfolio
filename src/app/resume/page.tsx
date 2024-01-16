@@ -33,7 +33,7 @@ const getData = async () => {
 
 const Resume = async () => {
   const { metaData, resume, skills, tenure } = await getData();
-  console.log("===tenure: ", tenure);
+
   const { full_name } = metaData;
   const { about, tagline, contact, education, experience } = resume;
   return (

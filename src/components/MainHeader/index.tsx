@@ -16,12 +16,12 @@ export const MainHeader: React.FC<MainHeaderProps> = ({
       <Image
         priority
         src={MAIN_IMAGE_PATH}
-        height={140}
-        width={140}
+        height={130}
+        width={130}
         alt={fullName}
         className="rounded-[80px]"
       />
-      <div className="text-center md:text-left">
+      <div className="flex flex-col text-center md:text-left gap-1">
         <H1>{fullName}</H1>
         <H3>
           {designation}

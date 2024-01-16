@@ -42,5 +42,17 @@ module.exports = {
       textColor: ["dark"], // Add 'dark' variant to textColor
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      "light",
+      {
+        customdark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=black]"],
+          "base-100": "#1b1b1b",
+        },
+      },
+    ],
+    darkTheme: "customdark",
+  },
 };

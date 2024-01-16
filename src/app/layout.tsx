@@ -48,11 +48,11 @@ export default async function RootLayout({
   const { menu } = await getData();
   return (
     <html lang="en">
-      <body
-        className={`${plusJakartaSans.className} container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 md:px-20`}
-      >
+      <body className={`${plusJakartaSans.className}`}>
         <MenuComponent menu={menu} />
-        {children}
+        <div className="container mx-auto px-8 lg:px-50 xl:px-60 md:px-30 md:px-20">
+          {children}
+        </div>
       </body>
     </html>
   );

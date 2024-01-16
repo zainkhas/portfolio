@@ -25,19 +25,19 @@ export interface Project {
 
 export interface Projects extends Array<Project> {}
 
-interface Contact {
+export interface Contact {
   name: string;
   url: string;
   icon: string;
 }
 
-interface Education {
+export interface Education {
   field: string;
   duration: string;
   institute: string;
 }
 
-interface Experience {
+export interface Experience {
   company: string;
   designation: string;
   joining_date: string;
@@ -67,4 +67,14 @@ export interface MetaData {
   email: string;
   phone_number: string;
   social_links: Contact[];
+}
+
+interface Tenure {
+  start: string;
+  end: string;
+  duration: string;
+}
+
+export interface Tenures {
+  [key: string]: Tenure;
 }

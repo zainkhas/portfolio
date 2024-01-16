@@ -1,8 +1,8 @@
-import { ResumeData } from "@/common/types";
+import { ResumeData, Tenures } from "@/common/types";
 import moment from "moment";
 
-export const getTenure = (resume: ResumeData): Record<string, any> =>
-  resume.experience.reduce((obj: Record<string, any>, item) => {
+export const getTenure = (resume: ResumeData): Tenures =>
+  resume.experience.reduce((obj: Tenures, item) => {
     const startDate = moment(item.joining_date, "DD-MM-YYYY");
     const exitDate = item.exit_date
       ? moment(item.exit_date, "DD-MM-YYYY")
